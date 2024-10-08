@@ -5,6 +5,14 @@ Capstone project delivered by Kelly Tong, Annie (Xueqing) Wu, Harry (Haochong) X
 #### Description
 This Github repository serves as the primarily record of our capstone team project. The project cooperates with the Social Insider company to accomplish 2 main goals: 1. developing an algorithm to predict user behavior (subscribe/purchase to Social Insider services) base on a series of events conducted by the user; 2. predicting the follower count and average engagement rate of social media pages based on historical performance data. 
 
+#### Using Guide
+
+`Step 1: ` Clone the entire Github repository to local. (Make sure everything is up to date with Git Pull) 
+
+`Step 2: ` Directly run the code from the jupyter notebooks. (everything, including path, is already set up and prepared for direct running) 
+
+`Step 3: ` Descriptions and commennts in the jupyter notebooks support better understanding of the process. 
+
 #### Overall Timeline
 
 ![timeline](https://github.com/user-attachments/assets/13acd1ba-d3a2-4f16-82e2-ceb16a748575)
@@ -40,3 +48,25 @@ A simplified diagram for explaining the pipeline transformation:
 <img width="1161" alt="截屏2024-10-08 04 20 17" src="https://github.com/user-attachments/assets/a4c18974-8c1b-4da8-a0f5-a82b57340b1b">
 
 Based on our EDA insights, we have done data cleaning and feature engineering, in which we have built a pipeline for transforming the original event-level data to user-level data. In the original data, each row is representing each event done by the user and its associated information such as load time, platform etc. In the transformed data, each row is representing behaviors and features related to every unique user. There are in total 50 features that have been transformed by the pipeline currently. These mainly include conversion, country, country_xxx (whether the user belong to one of the top 5 buy sucess country), load time, count of specific events, count of each specific platform and count for each type of view.
+
+Transformed Features Include: 
+- Conversion
+- Country--select the first country shown at the event
+- Aggregated Load Time
+  - Average Load time
+  - Maximum load time
+- Count of events for each user (events that can potentially distinguish whether users can convert)
+  - bench load success
+  - profile search success
+  - add profile success
+  - pricing modal visited
+  - profile load fail
+  - email receipt
+- Count of each platform--combined categories
+  - Examples: 
+  - Facebook & fb -----> fb -----> platform_fb_count
+  - Twitter & tw  -----> tw -----> platform_tw_count
+- Count for each type of view (19 categories)
+  - Examples: 
+  - Profile  ----->  view_profile
+  - Projecthome ----->  view_projecthome
