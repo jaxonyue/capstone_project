@@ -18,10 +18,12 @@ This Github repository serves as the primarily record of our capstone team proje
 ![timeline](https://github.com/user-attachments/assets/13acd1ba-d3a2-4f16-82e2-ceb16a748575)
 
 #### Important Files Included: 
-- Data & Files Folder:
+- `Data Folder: `
     - socialinsider_events_2024.csv data files which are labeled with the associated month. Ex. socialinsider_events_2024-05.csv is the event data in May 2024. 
+- `Data_Pipeline Folder: `
     - Social_Insider_Data_Pipeline.ipynb: a jupyter notebook that involves all processes for transforming original event-level data to user-level data, which serves as the data preprocessing stage before modeling.
-- exploratory_analysis Folder:
+- `EDA Files Folder: `
+    - Social_Insider_EDA_DataViz.ipynb: a jupyter notebook that includes all the processing code for generating the exploratory data analysis visualizations
     - Socialinsider Exploratory Data Analysis.pdf: a report that includes main details of our exploratory analysis outcomes. The report explains data insights with visualizations as well as pipeline transformation process. 
  
 #### Example User Journey on a Social Insider Platform
@@ -52,6 +54,7 @@ Based on our EDA insights, we have done data cleaning and feature engineering, i
 Transformed Features Include: 
 - Conversion
 - Country--select the first country shown at the event
+- Country_"countryname" -- whether the user belongs to one of the top 5 conversion rate countries
 - Aggregated Load Time
   - Average Load time
   - Maximum load time
