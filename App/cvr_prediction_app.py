@@ -188,6 +188,9 @@ if uploaded_file is not None:
         columns.insert(3, "p_cvr")
         user_data = user_data[columns]
 
+        # Sort by p_cvr in descending order
+        user_data = user_data.sort_values(by="p_cvr", ascending=False)
+
         # Display the transformed data and download link
         st.success("✅ Data Transformation and Prediction Completed")
         st.dataframe(user_data, use_container_width=True)
@@ -206,10 +209,10 @@ if uploaded_file is not None:
 
 if 'csv' in locals() or 'csv' in globals():
     st.markdown("""
-### ⬇️ Sort data by clicking on the column headers.
+### ⬇️ Data sorted by **p_cvr** in descending order by default. Sort data by clicking on the column headers.
 ### 🔢 Key Variables Explained:
-- **User ID**: Identifier for each unique user.
-- **Converted**: Indicates real-life conversion (1 for success, 0 otherwise).
-- **Predicted Conversion**: Model-predicted conversion status (1 for predicted success, 0 otherwise).
-- **Conversion Probability**: Conversion likelihood as predicted by the model.
+- **user_id**: Identifier for each unique user.
+- **successful**: Indicates real-life conversion (1 for success, 0 otherwise).
+- **p_converted**: Model-predicted conversion status (1 for predicted success, 0 otherwise).
+- **p_cvr**: Conversion likelihood as predicted by the model.
 """)
