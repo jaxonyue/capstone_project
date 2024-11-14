@@ -3,6 +3,7 @@ import pandas as pd
 import pickle
 from sklearn.preprocessing import StandardScaler
 import numpy as np
+import os
 
 # Debug information
 st.write("Current working directory:", os.getcwd())
