@@ -209,8 +209,8 @@ if uploaded_file is not None:
 
 if 'csv' in locals() or 'csv' in globals():
     st.markdown("""
-### Sort data by clicking on the column headers.
-### Key Variables Explained:
+###⬇️Sort data by clicking on the column headers.
+###🔢Key Variables Explained:
 - **User ID**: Identifier for each unique user.
 - **Converted**: Indicates real-life conversion (1 for success, 0 otherwise).
 - **Predicted Conversion**: Model-predicted conversion status (1 for predicted success, 0 otherwise).
