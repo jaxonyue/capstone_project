@@ -12,7 +12,7 @@ st.set_page_config(page_title='Customer Conversion Prediction Tool', layout='wid
 st.write("Current working directory:", os.getcwd())
 
 # Load and display the logo and title
-st.image("/socialinsider_logo.png", width=80)
+st.image("App/socialinsider_logo.png", width=80)
 st.markdown(
     """
     <h1 style="color: white; font-size: 36px; margin-left: 20px;">Customer Conversion Prediction Tool</h1>
@@ -163,7 +163,7 @@ if uploaded_file is not None:
         X_categorical = X_test[categorical_columns]
         X_continuous = X_test.drop(columns=categorical_columns)
 
-        with open("/scaler.pkl", "rb") as file:
+        with open("App/scaler.pkl", "rb") as file:
             scaler = pickle.load(file)
 
         X_continuous_scaled = pd.DataFrame(scaler.transform(X_continuous))
@@ -173,7 +173,7 @@ if uploaded_file is not None:
 
         X_test_scaled.columns = X_test_scaled.columns.astype(str)
 
-        with open("/best_model.pkl", "rb") as file:
+        with open("App/best_model.pkl", "rb") as file:
             model = pickle.load(file)
 
         y_pred = model.predict(X_test_scaled)
