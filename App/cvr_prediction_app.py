@@ -5,11 +5,11 @@ from sklearn.preprocessing import StandardScaler
 import numpy as np
 import os
 
-# Debug information
-st.write("Current working directory:", os.getcwd())
-
 # Streamlit app title
 st.set_page_config(page_title='Customer Conversion Prediction Tool', layout='wide', initial_sidebar_state='expanded')
+
+# Debug information
+st.write("Current working directory:", os.getcwd())
 
 # Load and display the logo and title
 st.image("/socialinsider_logo.png", width=80)
