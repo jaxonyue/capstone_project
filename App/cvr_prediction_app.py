@@ -8,9 +8,6 @@ import os
 # Streamlit app title
 st.set_page_config(page_title='Customer Conversion Prediction Tool', layout='wide', initial_sidebar_state='expanded')
 
-# Debug information
-st.write("Current working directory:", os.getcwd())
-
 # Load and display the logo and title
 st.image("App/socialinsider_logo.png", width=80)
 st.markdown(
@@ -209,8 +206,8 @@ if uploaded_file is not None:
 
 if 'csv' in locals() or 'csv' in globals():
     st.markdown("""
-###⬇️Sort data by clicking on the column headers.
-###🔢Key Variables Explained:
+### ⬇️ Sort data by clicking on the column headers.
+### 🔢 Key Variables Explained:
 - **User ID**: Identifier for each unique user.
 - **Converted**: Indicates real-life conversion (1 for success, 0 otherwise).
 - **Predicted Conversion**: Model-predicted conversion status (1 for predicted success, 0 otherwise).
